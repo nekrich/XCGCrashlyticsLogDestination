@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XCGCrashlyticsLogDestination  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="XCGCrashlyticsLogDestination  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">XCGCrashlyticsLogDestination Docs</a> (92% documented)</p>
+        <p class="header-right"><a href="https://github.com/nekrich/XCGCrashlyticsLogDestination"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">XCGCrashlyticsLogDestination Reference</a>
+        <img id="carat" src="img/carat.png" />
+        XCGCrashlyticsLogDestination  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/DefaultNSErrorFomXCGLogDetailsConstructor.html">DefaultNSErrorFomXCGLogDetailsConstructor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/XCGCrashlyticsLogDestination.html">XCGCrashlyticsLogDestination</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/CLSCrashReport.html">CLSCrashReport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CLSReport.html">CLSReport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/XCGLogDetails.html">XCGLogDetails</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/XCGLogger.html">XCGLogger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/NSErrorFomXCGLogDetailsConstructor.html">NSErrorFomXCGLogDetailsConstructor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#xcgcrashlyticslogdestination' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='xcgcrashlyticslogdestination'>XCGCrashlyticsLogDestination</h1>
+<a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>CocoaPods</h3>
+
+<p>Add pre-install hook:</p>
+<pre class="highlight plaintext"><code>pre_install do |installer|
+    def installer.verify_no_static_framework_transitive_dependencies; end
+end
+</code></pre>
+
+<p>and</p>
+<pre class="highlight plaintext"><code>pod 'XCGCrashlyticsLogDestination'
+</code></pre>
+<a href='#what-inside' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='what-inside'>What inside</h3>
+<a href='#code-xcgcrashlyticslogdestination-code' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='code-xcgcrashlyticslogdestination-code'><code>XCGCrashlyticsLogDestination</code></h4>
+
+<ol>
+<li><p>Writes your log into <a href="https://docs.fabric.io/apple/crashlytics/enhanced-reports.html#custom-logs">Crashlytics custom logs</a>.</p></li>
+<li><p>Can automatically convert your <code>.Severe</code> log to <a href="https://docs.fabric.io/apple/crashlytics/logged-errors.html">Crashlytics non-fatal errors</a> (if you wish, ofcourse).</p></li>
+</ol>
+<a href='#code-xcglogger-code-extension' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='code-xcglogger-code-extension'><code>XCGLogger</code> extension</h4>
+
+<ol>
+<li><code>error</code> and <code>severe</code> methods supports <code>NSError</code>.</li>
+<li><code>nonFatalError</code> method, that will pass yours <code>String</code> or <code>NSError</code> to Crashlytics non-fatal errors, without <code>XCGCrashlyticsLogDestination</code>.</li>
+</ol>
+<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='usage'>Usage</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">log</span> <span class="o">=</span> <span class="kt">XCGLoger</span><span class="p">(</span><span class="o">...</span>
+</code></pre>
+<a href='#code-xcgcrashlyticslogdestination-code' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='code-xcgcrashlyticslogdestination-code'><code>XCGCrashlyticsLogDestination</code></h4>
+
+<p>Send all <code>severe</code> logs to Crashlytics as non-fatal erors, and attach log to all errors, if they are occured:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">crashlyticsDestination</span> <span class="o">=</span> 
+<span class="kt">XCGCrashlyticsLogDestination</span><span class="p">(</span><span class="nv">owner</span><span class="p">:</span> <span class="n">log</span><span class="p">,</span> 
+    <span class="nv">identifier</span><span class="p">:</span> <span class="s">"crashlyticsDestination"</span><span class="p">,</span> 
+    <span class="nv">outputToConsole</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nv">recordSevereLogAsNonFalalErrors</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+
+<span class="n">log</span><span class="o">.</span><span class="nf">addLogDestination</span><span class="p">(</span><span class="n">crashlyticsDestination</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">log</span><span class="o">.</span><span class="nf">info</span><span class="p">(</span><span class="s">"Yours message"</span><span class="p">)</span>
+</code></pre>
+<a href='#note-code-xcgcrashlyticslogdestination-code-object-overwrites-code-crashlytics-sharedinstance-delegate-code-on-initialization-to-get-crash-report-for-last-execution-it-39-s-better-to-have-only-one-instance-of-code-xcgcrashlyticslogdestination-code' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h6 id='note-code-xcgcrashlyticslogdestination-code-object-overwrites-code-crashlytics-sharedinstance-delegate-code-on-initialization-to-get-crash-report-for-last-execution-it-39-s-better-to-have-only-one-instance-of-code-xcgcrashlyticslogdestination-code'>Note: <code>XCGCrashlyticsLogDestination</code> object overwrites <code>Crashlytics.sharedInstance().delegate</code> on initialization to get crash report for last execution. It&rsquo;s better to have only one instance of <code>XCGCrashlyticsLogDestination</code>.</h6>
+<a href='#code-xcglogger-code-extension' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='code-xcglogger-code-extension'><code>XCGLogger</code> extension</h4>
+
+<p>Log an occured <code>NSError</code>, and send it to Crashlytics:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">log</span><span class="o">.</span><span class="nf">nonFatalError</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+</code></pre>
+
+<p>or </p>
+<pre class="highlight swift"><code><span class="n">log</span><span class="o">.</span><span class="n">nonFatalError</span> <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="k">let</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="n">error</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>or log an error <code>String</code>, and send it to Crashlytics:</p>
+<pre class="highlight swift"><code><span class="n">log</span><span class="o">.</span><span class="n">nonFatalError</span> <span class="p">{</span>
+    <span class="k">guard</span> <span class="o">!</span><span class="n">somethingGood</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span>
+    <span class="k">return</span> <span class="s">"Holy diver!"</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>and ofcourse:</p>
+<pre class="highlight swift"><code><span class="n">log</span><span class="o">.</span><span class="nf">error</span><span class="p">(</span><span class="err">`</span><span class="kt">NSError</span><span class="err">`</span><span class="kt">Object</span><span class="p">)</span>
+</code></pre>
+
+<p>and</p>
+<pre class="highlight swift"><code><span class="n">log</span><span class="o">.</span><span class="n">severe</span> <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="k">return</span> <span class="err">`</span><span class="kt">NSError</span><span class="err">`</span><span class="kt">Object</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#references' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='references'>References</h3>
+
+<p>You can find more info on XCGLogger/Crashlytics (documentation and setup) here:</p>
+
+<p><a href="https://github.com/DaveWoodCom/XCGLogger">XCGLogger</a></p>
+
+<p><a href="https://docs.fabric.io/apple/crashlytics/overview.html">Crashlytics</a></p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://twitter.com/iNekrich" target="_blank" rel="external">Vitalii Budnik</a>. All rights reserved. (Last updated: 2016-08-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

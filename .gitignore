@@ -1,0 +1,52 @@
+# Cocoapods generated files #
+######################
+Pods
+#Podfile.lock
+**/Pods/
+#**/Podfile.lock
+*.xcworkspace
+**/*.xcworkspace/
+**/xcuserdata/
+
+# Xcode project files #
+######################
+xcuserdata
+build/
+DerivedData
+
+# Appcode project files #
+######################
+.idea/*
+.idea/
+*.idea*
+.idea
+*idea*
+
+# Platform specific #
+######################
+.DS_Store
+**/.DS_Store
+
+# Python #
+######################
+.pyc
+
+# fastlane specific
+fastlane/report.xml
+
+# deliver temporary files
+fastlane/Preview.html
+
+# snapshot generated screenshots
+fastlane/screenshots
+
+# scan temporary files
+fastlane/test_output
+
+# Certificate files
+*.cer
+*.certSigningRequest
+*.ipa
+*.p12
+*.dsym.ZIP
+*.mobileProvision

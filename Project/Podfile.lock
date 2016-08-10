@@ -1,0 +1,18 @@
+PODS:
+  - Crashlytics (3.7.2):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.7)
+  - XCGLogger (3.3)
+
+DEPENDENCIES:
+  - Crashlytics
+  - XCGLogger
+
+SPEC CHECKSUMS:
+  Crashlytics: 130ab943f8c78cda7a814b434f270b2e2c8a3cba
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  XCGLogger: d6e196e78940ff6daab17d6917107876f973fa31
+
+PODFILE CHECKSUM: ec987271bee1e0eaf1514cd48e936096545d4cdb
+
+COCOAPODS: 1.0.1

@@ -1,0 +1,17 @@
+output: docs
+clean: true
+sdk: iphoneos
+xcodebuild_arguments: [-workspace, Project/XCGCrashlyticsLogDestination.xcworkspace, -scheme, XCGCrashlyticsLogDestination]
+
+author: "Vitalii Budnik"
+
+author_url: https://twitter.com/iNekrich
+module: XCGCrashlyticsLogDestination
+
+readme: README.markdown
+
+github_url: https://github.com/nekrich/XCGCrashlyticsLogDestination
+github_file_prefix: https://github.com/nekrich/XCGCrashlyticsLogDestination/tree/0.0.1
+
+theme: apple
+sdk: iphoneos

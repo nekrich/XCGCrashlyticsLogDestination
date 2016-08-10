@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XCGLogger Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/XCGLogger" class="dashAnchor"></a>
+    <a title="XCGLogger Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">XCGCrashlyticsLogDestination Docs</a> (92% documented)</p>
+        <p class="header-right"><a href="https://github.com/nekrich/XCGCrashlyticsLogDestination"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">XCGCrashlyticsLogDestination Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        XCGLogger Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DefaultNSErrorFomXCGLogDetailsConstructor.html">DefaultNSErrorFomXCGLogDetailsConstructor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/XCGCrashlyticsLogDestination.html">XCGCrashlyticsLogDestination</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CLSCrashReport.html">CLSCrashReport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CLSReport.html">CLSReport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/XCGLogDetails.html">XCGLogDetails</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/XCGLogger.html">XCGLogger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/NSErrorFomXCGLogDetailsConstructor.html">NSErrorFomXCGLogDetailsConstructor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>XCGLogger</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger5errorFTKT_GSqCSo7NSError_12functionNameSS8fileNameSS10lineNumberSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/error(_:functionName:fileName:lineNumber:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger5errorFTKT_GSqCSo7NSError_12functionNameSS8fileNameSS10lineNumberSi_T_">error(_:functionName:fileName:lineNumber:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes log with <code>Error</code> level, using <code>()-&gt;NSError?</code> closure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">error</span><span class="p">(</span>
+		<span class="kd">@autoclosure</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSError</span><span class="p">?,</span>
+		<span class="nv">functionName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span>
+		<span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+		<span class="nv">lineNumber</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>closure, that returns <code>NSError</code> or <code>nil</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>functionName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>function name. Default value: <code>#function</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file name. Default value: <code>#file</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lineNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>line number. Default value: <code>#line</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/nekrich/XCGCrashlyticsLogDestination/tree/0.0.1/Source/Extensions/XCGLogger+NSError.swift#L24-L35">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger5errorFTSS8fileNameSS10lineNumberSi7closureFT_GSqCSo7NSError__T_"></a>
+                    <a name="//apple_ref/swift/Method/error(_:fileName:lineNumber:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger5errorFTSS8fileNameSS10lineNumberSi7closureFT_GSqCSo7NSError__T_">error(_:fileName:lineNumber:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes log with <code>Error</code> level, using <code>()-&gt;NSError?</code> closure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">error</span><span class="p">(</span>
+		<span class="nv">functionName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span>
+		<span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+		<span class="nv">lineNumber</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span>
+		<span class="kd">@noescape</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSError</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>functionName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>function name. Default value: <code>#function</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file name. Default value: <code>#file</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lineNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>line number. Default value: <code>#line</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>closure, that returns <code>NSError</code> or <code>nil</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/nekrich/XCGCrashlyticsLogDestination/tree/0.0.1/Source/Extensions/XCGLogger+NSError.swift#L45-L56">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger6severeFTKT_GSqCSo7NSError_12functionNameSS8fileNameSS10lineNumberSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/severe(_:functionName:fileName:lineNumber:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger6severeFTKT_GSqCSo7NSError_12functionNameSS8fileNameSS10lineNumberSi_T_">severe(_:functionName:fileName:lineNumber:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes log with <code>Severe</code> level, using <code>()-&gt;NSError?</code> closure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">severe</span><span class="p">(</span>
+		<span class="kd">@autoclosure</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSError</span><span class="p">?,</span>
+		<span class="nv">functionName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span>
+		<span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+		<span class="nv">lineNumber</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>closure, that returns <code>NSError</code> or <code>nil</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>functionName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>function name. Default value: <code>#function</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file name. Default value: <code>#file</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lineNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>line number. Default value: <code>#line</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/nekrich/XCGCrashlyticsLogDestination/tree/0.0.1/Source/Extensions/XCGLogger+NSError.swift#L66-L77">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger6severeFTSS8fileNameSS10lineNumberSi7closureFT_GSqCSo7NSError__T_"></a>
+                    <a name="//apple_ref/swift/Method/severe(_:fileName:lineNumber:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger6severeFTSS8fileNameSS10lineNumberSi7closureFT_GSqCSo7NSError__T_">severe(_:fileName:lineNumber:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes log with <code>Severe</code> level, using <code>()-&gt;NSError?</code> closure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">severe</span><span class="p">(</span>
+		<span class="nv">functionName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span>
+		<span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+		<span class="nv">lineNumber</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span>
+		<span class="kd">@noescape</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSError</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>functionName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>function name. Default value: <code>#function</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file name. Default value: <code>#file</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lineNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>line number. Default value: <code>#line</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>closure, that returns <code>NSError</code> or <code>nil</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/nekrich/XCGCrashlyticsLogDestination/tree/0.0.1/Source/Extensions/XCGLogger+NSError.swift#L87-L98">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger13nonFatalErrorFTKT_GSqCSo7NSError_12functionNameSS8fileNameSS10lineNumberSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/nonFatalError(_:functionName:fileName:lineNumber:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger13nonFatalErrorFTKT_GSqCSo7NSError_12functionNameSS8fileNameSS10lineNumberSi_T_">nonFatalError(_:functionName:fileName:lineNumber:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes log with <code>Error</code> level, using <code>()-&gt;NSError?</code> closure, and sends resulting string
+to Crashlytics as non-fatal error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">nonFatalError</span><span class="p">(</span>
+		<span class="kd">@autoclosure</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSError</span><span class="p">?,</span>
+		<span class="nv">functionName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span>
+		<span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+		<span class="nv">lineNumber</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>closure, that returns <code>NSError</code> or <code>nil</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>functionName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>function name. Default value: <code>#function</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file name. Default value: <code>#file</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lineNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>line number. Default value: <code>#line</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/nekrich/XCGCrashlyticsLogDestination/tree/0.0.1/Source/Extensions/XCGLogger+Crashlytics.swift#L26-L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger13nonFatalErrorFTSS8fileNameSS10lineNumberSi7closureFT_GSqCSo7NSError__T_"></a>
+                    <a name="//apple_ref/swift/Method/nonFatalError(_:fileName:lineNumber:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger13nonFatalErrorFTSS8fileNameSS10lineNumberSi7closureFT_GSqCSo7NSError__T_">nonFatalError(_:fileName:lineNumber:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes log with <code>Error</code> level, using <code>()-&gt;NSError?</code> closure, and sends resulting string
+to Crashlytics as non-fatal error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">nonFatalError</span><span class="p">(</span>
+		<span class="nv">functionName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span>
+		<span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+		<span class="nv">lineNumber</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span>
+		<span class="kd">@noescape</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSError</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>functionName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>function name. Default value: <code>#function</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file name. Default value: <code>#file</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lineNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>line number. Default value: <code>#line</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>closure, that returns <code>NSError</code> or <code>nil</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/nekrich/XCGCrashlyticsLogDestination/tree/0.0.1/Source/Extensions/XCGLogger+Crashlytics.swift#L50-L63">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger13nonFatalErrorFTKT_GSqSS_12functionNameSS8fileNameSS10lineNumberSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/nonFatalError(_:functionName:fileName:lineNumber:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger13nonFatalErrorFTKT_GSqSS_12functionNameSS8fileNameSS10lineNumberSi_T_">nonFatalError(_:functionName:fileName:lineNumber:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes log with <code>Error</code> level, using <code>()-&gt;String?</code> closure, and sends resulting string 
+to Crashlytics as non-fatal error.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Uses constructor, setted in <code><a href="../Extensions/XCGLogDetails.html#/s:ZvE28XCGCrashlyticsLogDestinationV9XCGLogger13XCGLogDetails22NSErrorConstructorTypePMPS_34NSErrorFomXCGLogDetailsConstructor_">XCGLogDetails.NSErrorConstructorType</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">nonFatalError</span><span class="p">(</span>
+		<span class="kd">@autoclosure</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?,</span>
+		<span class="nv">functionName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span>
+		<span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+		<span class="nv">lineNumber</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>closure, that returns <code>NSError</code> or <code>nil</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>functionName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>function name. Default value: <code>#function</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file name. Default value: <code>#file</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lineNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>line number. Default value: <code>#line</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/nekrich/XCGCrashlyticsLogDestination/tree/0.0.1/Source/Extensions/XCGLogger+Crashlytics.swift#L106-L119">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger13nonFatalErrorFTSS8fileNameSS10lineNumberSi7closureFT_GSqSS__T_"></a>
+                    <a name="//apple_ref/swift/Method/nonFatalError(_:fileName:lineNumber:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE28XCGCrashlyticsLogDestinationC9XCGLogger9XCGLogger13nonFatalErrorFTSS8fileNameSS10lineNumberSi7closureFT_GSqSS__T_">nonFatalError(_:fileName:lineNumber:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes log with <code>Error</code> level, using <code>()-&gt;String?</code> closure, and sends resulting string 
+to Crashlytics as non-fatal error.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Uses constructor, setted in <code><a href="../Extensions/XCGLogDetails.html#/s:ZvE28XCGCrashlyticsLogDestinationV9XCGLogger13XCGLogDetails22NSErrorConstructorTypePMPS_34NSErrorFomXCGLogDetailsConstructor_">XCGLogDetails.NSErrorConstructorType</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">nonFatalError</span><span class="p">(</span>
+		<span class="nv">functionName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span>
+		<span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span>
+		<span class="nv">lineNumber</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span>
+		<span class="kd">@noescape</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>functionName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>function name. Default value: <code>#function</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file name. Default value: <code>#file</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lineNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>line number. Default value: <code>#line</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>closure, that returns <code>NSError</code> or <code>nil</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/nekrich/XCGCrashlyticsLogDestination/tree/0.0.1/Source/Extensions/XCGLogger+Crashlytics.swift#L132-L145">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://twitter.com/iNekrich" target="_blank" rel="external">Vitalii Budnik</a>. All rights reserved. (Last updated: 2016-08-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
